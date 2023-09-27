@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 05:20:27 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/28 05:56:25 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 07:25:39 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,17 @@ void	ft_putxnbr_sub(unsigned int n, long long *weight, long long *lnb)
 		*lnb *= -1;
 	while (*lnb >= 16LL * *weight)
 		*weight *= 16LL;
+}
+
+void	print_hex(long long weight, long long lnb, bool is_large, int *len)
+{
+	while (weight)
+	{
+		if (is_large)
+			(*len) += ft_putchar(UPPER_HEX[lnb / weight]);
+		else
+			(*len) += ft_putchar(LOWER_HEX[lnb / weight]);
+		lnb %= weight;
+		weight /= 16LL;
+	}
 }

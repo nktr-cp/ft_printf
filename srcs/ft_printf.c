@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:24:23 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/28 05:56:05 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 07:06:50 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_printf_out(t_format info, va_list *args, char c, int *len)
 	else if (c == 'x')
 		printf_x(info, va_arg(*args, unsigned int), len);
 	else if (c == 'X')
-		printf_X(info, va_arg(*args, unsigned int), len);
+		printf_x_upper(info, va_arg(*args, unsigned int), len);
 	else if (c == 'p')
 		printf_p(info, va_arg(*args, void *), len);
 	else if (c == '%')

@@ -6,7 +6,7 @@
 #    By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 16:37:53 by knishiok          #+#    #+#              #
-#    Updated: 2023/09/28 05:21:19 by knishiok         ###   ########.fr        #
+#    Updated: 2023/09/28 07:09:51 by knishiok         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SRCS = srcs/ft_printf.c \
 	srcs/print_c_s_percent.c \
 	srcs/print_d_i.c \
 	srcs/print_u.c \
-	srcs/print_x.c
+	srcs/print_x.c \
+	srcs/print_upper_x.c
 
 OBJS = $(SRCS:.c=.o)
 

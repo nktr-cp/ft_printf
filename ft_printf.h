@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:29:28 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/28 05:56:46 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 07:25:45 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void		printf_s(t_format info, char *s, int *len);
 void		printf_d_i(t_format info, int n, int *len);
 void		printf_u(t_format info, unsigned int n, int *len);
 void		printf_x(t_format info, unsigned int n, int *len);
-void		printf_X(t_format info, unsigned int n, int *len);
+void		printf_x_upper(t_format info, unsigned int n, int *len);
 void		printf_p(t_format info, void *ptr, int *len);
 void		printf_percent(t_format info, int *len);
 int			ft_strlen(const char *s);
@@ -69,6 +69,12 @@ size_t		ft_strlcpy(char *dest, const char *src, size_t size);
 void		ft_putnbr_sub(int n, long long *weight, long long *lnb);
 void		ft_putunbr_sub(unsigned int n, long long *weight, long long *lnb);
 void		ft_putxnbr_sub(unsigned int n, long long *weight, long long *lnb);
+void		print_hex(long long weight, long long lnb, bool is_large, int *len);
+int			get_printhlen(t_format info, unsigned int n);
+void		get_puthchrs(t_format info, unsigned int n,
+				char *fill, char *putsign);
+int			process_hgap(t_format *info, char putsign,
+				unsigned int n, char fill);
 t_format	parse_flags(const char **s);
 
 #endif
