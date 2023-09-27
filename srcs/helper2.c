@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 07:21:35 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/27 19:28:46 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 00:10:04 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,14 @@ int	ft_min(int a, int b)
 	return (b);
 }
 
-int	digit_count(unsigned long value, int base_size)
+int	ft_max(int a, int b)
+{
+	if (a > b)
+		return (a);
+	return (b);
+}
+
+static unsigned long	unsigned_digit_count(unsigned long value, int base_size)
 {
 	int	digit;
 
@@ -55,7 +62,7 @@ char	*ft_itoa_positive_hex(unsigned long value)
 	int			digit;
 	char		*result;
 
-	digit = digit_count(value, 16);
+	digit = unsigned_digit_count(value, 16);
 	result = (char *)malloc(digit + 3);
 	if (result == NULL)
 		return (NULL);

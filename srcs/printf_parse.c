@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 16:56:38 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/26 08:19:09 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 01:23:48 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_format	create_new_format()
 	fmt.flags.period = false;
 	fmt.flags.space = false;
 	fmt.flags.set_width = false;
-	fmt.precision = INT_MAX;
+	fmt.precision = -1;
 	fmt.width = 0;
 	return (fmt);
 }
@@ -61,8 +61,9 @@ t_format	parse_flags(const char **s)
 		{
 			fmt.flags.period = true;
 			(*s)++;
-			if (**s >= '0' && **s <= '9')
+			if ((**s >= '0' && **s <= '9') || ft_strchr(SPECIFIER, **s))
 			{
+				fmt.flags.precision = true;
 				fmt.precision = ft_atoi(s);
 				(*s)--;
 			}

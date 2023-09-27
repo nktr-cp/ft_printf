@@ -6,13 +6,13 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 11:28:56 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/26 12:16:01 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/27 21:30:46 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	digit_count(int value, int base_size)
+int	digit_count(long value, int base_size)
 {
 	int	digit;
 

@@ -3,5 +3,6 @@
 
 int main()
 {
-	ft_printf("%5c", 'z');
+	printf(" %+3.2d \n", 0);
+	ft_printf(" %+3.2d \n", 0);
 }

@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:42:46 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/26 07:23:10 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/27 21:44:47 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,16 @@ int	ft_putchar(char c)
 {
 	write (STDOUT_FILENO, &c, 1);
 	return (1);
+}
+
+int	ft_putstr(char *s)
+{
+	int	res;
+
+	res = 0;
+	while (s[res])
+		write (STDOUT_FILENO, s + res++, 1);
+	return (res);
 }
 
 static long	ft_strtol_decimal(char **str)

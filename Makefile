@@ -6,7 +6,7 @@
 #    By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 16:37:53 by knishiok          #+#    #+#              #
-#    Updated: 2023/09/26 11:45:56 by knishiok         ###   ########.fr        #
+#    Updated: 2023/09/28 03:34:17 by knishiok         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,14 +18,18 @@ SRCS = srcs/ft_printf.c \
 	srcs/helper2.c \
 	srcs/helper3.c \
 	srcs/printf_parse.c \
-	srcs/print_helper1.c \
-	srcs/print_helper2.c
+	srcs/print_c_s_percent.c \
+	srcs/print_d_i.c \
+	srcs/print_u.c \
+	srcs/print_x.c
 
 OBJS = $(SRCS:.c=.o)
 
 INC = -I .
 
 all: $(NAME)
+
+bonus: all
 
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $@ $(OBJS)

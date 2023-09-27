@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:29:28 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/27 19:28:56 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 01:21:51 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ typedef struct s_flags
 	bool	space;
 	// 'number'
 	bool	set_width;
+	bool	precision;
 }	t_flags;
 
 typedef struct s_format
@@ -60,12 +61,14 @@ void		printf_p(t_format info, void *ptr, int *len);
 void		printf_percent(t_format info, int *len);
 int			ft_strlen(const char *s);
 int			ft_putchar(char c);
+int			ft_putstr(char *s);
 int			ft_printf(const char *s, ...);
 int			ft_atoi(const char **str);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strdup(const char *src);
 int			ft_min(int a, int b);
-int			digit_count(unsigned long value, int base_size)
+int			ft_max(int a, int b);
+int			digit_count(long value, int base_size);
 char		*ft_itoa_decimal(int value);
 char		*ft_itoa_positive_hex(unsigned long value);
 size_t		ft_strlcpy(char *dest, const char *src, size_t size);

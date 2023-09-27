@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_helper1.c                                    :+:      :+:    :+:   */
+/*   print_c_s_percent.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/25 20:34:32 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/26 13:18:34 by knishiok         ###   ########.fr       */
+/*   Created: 2023/09/28 02:20:16 by knishiok          #+#    #+#             */
+/*   Updated: 2023/09/28 02:20:18 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,12 +38,13 @@ void	printf_s(t_format info, char *s, int *len)
 	char	fill;
 
 	if (s == NULL)
-		ft_strlcpy(s, "(null)", 7);
-	s_len = ft_min(info.precision, ft_strlen(s));
+		s = "(null)";
+	s_len = ft_strlen(s);
+	if (info.precision != -1 && info.precision < s_len)
+		s_len = info.precision;
+	fill = ' ';
 	if (info.flags.zero_padding)
 		fill = '0';
-	else
-			fill = ' ';
 	while (!info.flags.left_align && info.width-- > s_len)
 		*len += ft_putchar(fill);
 	i = 0;
@@ -59,10 +60,7 @@ void	printf_p(t_format info, void *ptr, int *len)
 	char			*display;
 
 	if (ptr == NULL)
-	{
-		display = (char *)malloc(sizeof(char) * 4);
-		ft_strlcpy(display, "0x0", 4);
-	}
+		display = ft_strdup("0x0");
 	else
 	{
 		addr = (unsigned char *)ptr;
