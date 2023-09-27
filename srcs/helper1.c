@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:42:46 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/27 21:44:47 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 04:44:43 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,16 +69,4 @@ static long	ft_strtol_decimal(char **str)
 int	ft_atoi(const char **str)
 {
 	return ((int)ft_strtol_decimal((char **)str));
-}
-
-char	*ft_strchr(const char *s, int c)
-{
-	int		i;
-
-	i = 0;
-	while (s[i] && s[i] != (char)c)
-		i++;
-	if (s[i] == (char)c)
-		return ((char *)(s + i));
-	return (NULL);
 }

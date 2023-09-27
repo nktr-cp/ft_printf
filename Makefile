@@ -6,7 +6,7 @@
 #    By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 16:37:53 by knishiok          #+#    #+#              #
-#    Updated: 2023/09/28 03:34:17 by knishiok         ###   ########.fr        #
+#    Updated: 2023/09/28 05:21:19 by knishiok         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRCS = srcs/ft_printf.c \
 	srcs/helper1.c \
 	srcs/helper2.c \
 	srcs/helper3.c \
+	srcs/helper4.c \
 	srcs/printf_parse.c \
 	srcs/print_c_s_percent.c \
 	srcs/print_d_i.c \

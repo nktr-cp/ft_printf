@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 11:28:56 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/27 21:30:46 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 04:45:47 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,29 @@ char	*ft_itoa_decimal(int value)
 		lnb /= 10;
 	}
 	return (result);
+}
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	ret;
+
+	ret = ft_strlen(src);
+	if (size == 0)
+		return (ret);
+	while (--size && *src != '\0')
+		*dest++ = *src++;
+	*dest = '\0';
+	return (ret);
+}
+
+char	*ft_strchr(const char *s, int c)
+{
+	int		i;
+
+	i = 0;
+	while (s[i] && s[i] != (char)c)
+		i++;
+	if (s[i] == (char)c)
+		return ((char *)(s + i));
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 02:20:16 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/28 02:20:18 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 04:46:46 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,5 @@ void	printf_percent(t_format info, int *len)
 			*len += ft_putchar(fill);
 	}
 	if (!info.flags.left_align)
-		*len += ft_putchar('%');	
+		*len += ft_putchar('%');
 }

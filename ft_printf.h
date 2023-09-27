@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:29:28 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/28 01:21:51 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 05:56:46 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,12 @@
 
 typedef struct s_flags
 {
-	// '-'
 	bool	left_align;
-	// '0'
 	bool	zero_padding;
-	// '+'
 	bool	sign;
-	// '#'
 	bool	sharp;
-	// '.'
 	bool	period;
-	// ' '
 	bool	space;
-	// 'number'
 	bool	set_width;
 	bool	precision;
 }	t_flags;
@@ -56,7 +49,8 @@ void		printf_c(t_format info, int c, int *len);
 void		printf_s(t_format info, char *s, int *len);
 void		printf_d_i(t_format info, int n, int *len);
 void		printf_u(t_format info, unsigned int n, int *len);
-void		printf_x(t_format info, unsigned int n, int is_large, int *len);
+void		printf_x(t_format info, unsigned int n, int *len);
+void		printf_X(t_format info, unsigned int n, int *len);
 void		printf_p(t_format info, void *ptr, int *len);
 void		printf_percent(t_format info, int *len);
 int			ft_strlen(const char *s);
@@ -72,6 +66,9 @@ int			digit_count(long value, int base_size);
 char		*ft_itoa_decimal(int value);
 char		*ft_itoa_positive_hex(unsigned long value);
 size_t		ft_strlcpy(char *dest, const char *src, size_t size);
+void		ft_putnbr_sub(int n, long long *weight, long long *lnb);
+void		ft_putunbr_sub(unsigned int n, long long *weight, long long *lnb);
+void		ft_putxnbr_sub(unsigned int n, long long *weight, long long *lnb);
 t_format	parse_flags(const char **s);
 
 #endif

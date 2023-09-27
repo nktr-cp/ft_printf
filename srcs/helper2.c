@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 07:21:35 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/28 00:10:04 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 04:45:31 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,17 +75,4 @@ char	*ft_itoa_positive_hex(unsigned long value)
 	result[0] = '0';
 	result[1] = 'x';
 	return (result);
-}
-
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
-{
-	size_t	ret;
-
-	ret = ft_strlen(src);
-	if (size == 0)
-		return (ret);
-	while (--size && *src != '\0')
-		*dest++ = *src++;
-	*dest = '\0';
-	return (ret);
 }
