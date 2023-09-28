@@ -6,7 +6,7 @@
 #    By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 16:37:53 by knishiok          #+#    #+#              #
-#    Updated: 2023/09/28 07:09:51 by knishiok         ###   ########.fr        #
+#    Updated: 2023/09/28 20:48:00 by knishiok         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,4 +47,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
