@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:29:28 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/28 07:25:45 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/28 20:52:34 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 # include <stdarg.h>
 # include <stdbool.h>
 # include <limits.h>
-// debug
-# include <stdio.h>
 
 # define LOWER_HEX "0123456789abcdef"
 # define UPPER_HEX "0123456789ABCDEF"
@@ -60,7 +58,6 @@ int			ft_printf(const char *s, ...);
 int			ft_atoi(const char **str);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strdup(const char *src);
-int			ft_min(int a, int b);
 int			ft_max(int a, int b);
 int			digit_count(long value, int base_size);
 char		*ft_itoa_decimal(int value);
