@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:29:28 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/28 20:52:34 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/29 00:35:45 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,6 @@ void		get_puthchrs(t_format info, unsigned int n,
 				char *fill, char *putsign);
 int			process_hgap(t_format *info, char putsign,
 				unsigned int n, char fill);
-t_format	parse_flags(const char **s);
+t_format	parse_flags(const char *s);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:24:23 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/28 07:06:50 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/29 00:36:03 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_printf(const char *fmt, ...)
 		{
 			fmt++;
 			if (*fmt)
-				info = parse_flags(&fmt);
+				info = parse_flags(fmt);
 			ft_printf_out(info, &args, *fmt++, &len);
 		}
 		else
