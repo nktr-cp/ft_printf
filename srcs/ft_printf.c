@@ -6,7 +6,7 @@
 /*   By: knishiok <knishiok@student.42.jp>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 19:24:23 by knishiok          #+#    #+#             */
-/*   Updated: 2023/09/29 00:42:37 by knishiok         ###   ########.fr       */
+/*   Updated: 2023/09/30 11:18:31 by knishiok         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ int	ft_printf(const char *fmt, ...)
 		else
 			len += ft_putchar(*fmt++);
 	}
+	va_end(args);
 	return (len);
 }
